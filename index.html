@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>DatyLook: reserva con los mejores barberos y estilistas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="css/styles.css">
+<meta name="description" content="DatyLook es la app para reservar citas con barberos y estilistas. Elige a tu profesional, escoge la hora y confirma en segundos.">
+<meta name="theme-color" content="#0A2A4A">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='%23FF6B00' d='M12 1.8l3 6.7 7.3.8-5.4 4.9 1.5 7.2L12 17.7 5.6 21.4l1.5-7.2L1.7 9.3 9 8.5z'/></svg>">
+</head>
+<body>
+ 
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <div class="brand">
+    <a class="logo brand" href="#inicio" aria-label="DatyLook, ir al inicio">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.8l3 6.7 7.3.8-5.4 4.9 1.5 7.2L12 17.7 5.6 21.4l1.5-7.2L1.7 9.3 9 8.5z"/></svg>
+      <span class="brand-text">
+        <span class="brand-name">Daty<span class="look">Look</span></span>
+        <span class="tagline">¡Tu estilo, a un solo toque!</span>
+      </span>
+    </a>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#que-es">¿Qué es DatyLook?</a></li>
+      <li><a href="#funciones">¿Cuáles son sus funciones?</a></li>
+      <li><a href="#precios">¿Cuál es su precio?</a></li>
+      <li><a href="#preguntas">Preguntas frecuentes</a></li>
+      <li><a href="#contacto">¡Contáctanos!</a></li>
+    </ul>
+    <a class="btn btn-primary btn-sm" href="#descargar"><i class="fa-solid fa-download" aria-hidden="true"></i>Descargar app</a>
+    <button class="menu-btn" id="menu-btn" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</header>
+ 
+<main id="inicio">
+  <section class="hero">
+    <div>
+      <h1>Reserva con los mejores barberos y estilistas</h1>
+      <p class="lead">Elige a tu barbero, escoge la hora que te queda bien y confirma en segundos. Sin llamadas ni mensajes de ida y vuelta.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#descargar"><i class="fa-solid fa-download" aria-hidden="true"></i>Descargar la app</a>
+        <a class="btn btn-ghost" href="#como-funciona">Ver cómo funciona</a>
+      </div>
+      <small>Una sola app para clientes, barberos y administradores.</small>
+    </div>
+ 
+    <div class="phone-wrap" aria-hidden="true">
+      <div class="phone">
+        <h2>Agenda tu cita</h2>
+        <p class="sub">Corte clásico, 30 min</p>
+        <div class="barber">
+          <div class="avatar">C</div>
+          <div><strong>Carlos M.</strong><span>Barbero, disponible hoy</span></div>
+        </div>
+        <p class="slots-title">Horarios de hoy</p>
+        <div class="slots">
+          <div class="slot">3:00 PM</div>
+          <div class="slot on">3:30 PM</div>
+          <div class="slot">4:00 PM</div>
+          <div class="slot">4:30 PM</div>
+          <div class="slot">5:00 PM</div>
+          <div class="slot">5:30 PM</div>
+        </div>
+        <div class="btn btn-primary confirm">Confirmar reserva</div>
+      </div>
+    </div>
+  </section>
+ 
+  <section class="section" id="problema">
+    <div class="section-head">
+      <h2>Menos citas perdidas y una agenda más ordenada</h2>
+      <p>DatyLook organiza las reservas para que el negocio se dedique a atender y el cliente no tenga que esperar una respuesta.</p>
+    </div>
+    <div class="compare-head" aria-hidden="true"><span>Sin DatyLook</span><span>Con DatyLook</span></div>
+    <div class="compare">
+      <div class="compare-row">
+        <p class="before">Las citas se piden por mensajes y llamadas a cualquier hora.</p>
+        <p class="after">El cliente reserva solo, cuando quiera, y la cita aparece en la agenda del barbero.</p>
+      </div>
+      <div class="compare-row">
+        <p class="before">Se empalman los horarios y cuesta ver quién está libre.</p>
+        <p class="after">Cada horario se ocupa una sola vez y la agenda muestra el día completo.</p>
+      </div>
+      <div class="compare-row">
+        <p class="before">El dueño no tiene a la mano las reservas de todo el equipo.</p>
+        <p class="after">El administrador ve las reservas de todos los barberos en su propio panel.</p>
+      </div>
+    </div>
+  </section>
+ 
+  <div class="band">
+    <section class="section" id="que-es">
+      <div class="about">
+        <div class="about-text">
+          <h2>¿Qué es DatyLook?</h2>
+          <p>DatyLook es una app para reservar y gestionar citas de barbería y estilismo. Conecta a los clientes con barberos y estilistas desde el celular: el cliente elige a su profesional y reserva en un horario libre, y el negocio recibe cada cita ya ordenada en su agenda.</p>
+          <p>Es una sola app para tres tipos de usuario: clientes, barberos y administradores. Todos entran con el mismo inicio de sesión y la app los lleva a su panel según su rol.</p>
+        </div>
+        <ul class="features with-icons">
+          <li><div class="ico"><i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i></div><strong>Una app para el celular</strong><span>Disponible para Android, con una versión de demostración para probarla.</span></li>
+          <li><div class="ico"><i class="fa-solid fa-key" aria-hidden="true"></i></div><strong>Un solo inicio de sesión</strong><span>Clientes, barberos y administradores entran igual y ven su propio panel.</span></li>
+          <li><div class="ico"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></div><strong>Un plan con todo incluido</strong><span>Una suscripción mensual para el negocio, sin funciones aparte.</span></li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <div class="band">
+    <section class="section" id="como-funciona">
+      <div class="section-head">
+        <h2>Reservar toma tres pasos</h2>
+        <p>Desde el celular, sin llamadas y sin esperar respuesta.</p>
+      </div>
+      <ol class="steps">
+        <li>
+          <div class="step-num" aria-hidden="true">1</div>
+          <h3>Elige a tu barbero o estilista</h3>
+          <p>Mira quién atiende y escoge al profesional que prefieres.</p>
+        </li>
+        <li>
+          <div class="step-num" aria-hidden="true">2</div>
+          <h3>Escoge el servicio y la hora</h3>
+          <p>Solo aparecen los horarios que están libres.</p>
+        </li>
+        <li>
+          <div class="step-num" aria-hidden="true">3</div>
+          <h3>Confirma tu reserva</h3>
+          <p>Tu cita queda registrada en tu panel y en la agenda del barbero.</p>
+        </li>
+      </ol>
+    </section>
+  </div>
+
+  <section class="section" id="funciones">
+    <div class="section-head">
+      <h2>Cada persona entra a su propio panel</h2>
+      <p>Clientes, barberos y administradores usan el mismo inicio de sesión y la app los lleva a lo que necesitan.</p>
+    </div>
+
+    <div class="tabs" role="tablist" aria-label="Funciones por rol">
+      <button class="tab" role="tab" id="tab-cliente" aria-selected="true" aria-controls="panel-cliente"><i class="fa-solid fa-user" aria-hidden="true"></i>Cliente</button>
+      <button class="tab" role="tab" id="tab-barbero" aria-selected="false" aria-controls="panel-barbero" tabindex="-1"><i class="fa-solid fa-scissors" aria-hidden="true"></i>Barbero</button>
+    </div>
+
+    <div class="role-grid" role="tabpanel" id="panel-cliente" aria-labelledby="tab-cliente">
+      <ul class="features">
+        <li><strong>Encuentra a tu barbero o estilista</strong><span>Elige al profesional que prefieres antes de reservar.</span></li>
+        <li><strong>Reserva en los horarios libres</strong><span>Escoge el servicio y la hora sin llamar a nadie.</span></li>
+        <li><strong>Consulta tus próximas citas</strong><span>Todas tus reservas en un solo lugar.</span></li>
+      </ul>
+      <div class="phone-wrap" aria-hidden="true">
+        <div class="phone">
+          <h2>Mis citas</h2>
+          <p class="sub">Próximas reservas</p>
+          <div class="mrow"><div><strong>Corte clásico</strong><small>Carlos M.</small></div><span class="pill">Hoy, 3:30 PM</span></div>
+          <div class="mrow"><div><strong>Corte y barba</strong><small>Luis P.</small></div><span class="pill">Sáb, 10:00 AM</span></div>
+          <div class="btn btn-primary" style="margin-top:10px">Nueva reserva</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="role-grid" role="tabpanel" id="panel-barbero" aria-labelledby="tab-barbero" hidden>
+      <ul class="features">
+        <li><strong>Tu agenda del día</strong><span>Mira de un vistazo qué citas tienes y a qué hora.</span></li>
+        <li><strong>El detalle de cada cita</strong><span>Sabes qué cliente viene y qué servicio pidió.</span></li>
+        <li><strong>Un panel hecho para tu trabajo</strong><span>Al iniciar sesión, la app te lleva directo a tu agenda.</span></li>
+      </ul>
+      <div class="phone-wrap" aria-hidden="true">
+        <div class="phone">
+          <h2>Agenda de hoy</h2>
+          <p class="sub">Tienes 3 citas</p>
+          <div class="mrow"><div><strong>Andrés G.</strong><small>Corte clásico</small></div><span class="pill">3:00 PM</span></div>
+          <div class="mrow"><div><strong>Mario T.</strong><small>Corte y barba</small></div><span class="pill">3:30 PM</span></div>
+          <div class="mrow"><div><strong>José R.</strong><small>Afeitado</small></div><span class="pill">4:30 PM</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="band">
+    <section class="section" id="precios">
+      <div class="pricing">
+        <div class="section-head">
+          <h2>Un solo plan, sin sorpresas</h2>
+          <p>Una suscripción mensual para tu negocio, con los paneles de cliente, barbero y administrador incluidos.</p>
+        </div>
+        <div class="price-card">
+          <h3>Plan DatyLook</h3>
+          <div class="price"><strong>$29.99</strong><span>al mes</span></div>
+          <ul class="price-list">
+            <li>Reservas en línea para tus clientes</li>
+            <li>Agenda para cada barbero o estilista</li>
+            <li>Panel del administrador con todo el equipo</li>
+            <li>Un solo inicio de sesión para todos los roles</li>
+          </ul>
+          <a class="btn btn-primary" href="#descargar">Empezar ahora</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section class="section" id="preguntas">
+    <div class="section-head">
+      <h2>Preguntas frecuentes</h2>
+      <p>Lo que suelen preguntar los negocios y los clientes antes de empezar.</p>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>¿Quién paga la suscripción?</summary>
+        <p>La suscripción es para el negocio, ya sea una barbería o un salón. Los clientes reservan sus citas desde la app.</p>
+      </details>
+      <details>
+        <summary>¿Puedo probar la app antes de contratarla?</summary>
+        <p>Sí. Hay una versión de demostración con datos simulados donde puedes entrar como cliente, barbero o administrador.</p>
+      </details>
+      <details>
+        <summary>¿Cómo entra cada persona a su panel?</summary>
+        <p>Todos usan el mismo inicio de sesión. La app los lleva a su panel según su rol.</p>
+      </details>
+      <details>
+        <summary>¿Cómo creo una cuenta o recupero mi contraseña?</summary>
+        <p>En la pantalla de inicio toca “Regístrate” para crear una cuenta, o “¿Olvidaste tu contraseña?” para recuperarla.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="section" id="descargar">
+    <div class="cta-final">
+      <h2>Empieza hoy con DatyLook</h2>
+      <p>Descarga la app para Android y prueba la demo con datos simulados. Entra como cliente, barbero o administrador.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="assets/app-debug.apk" download><i class="fa-brands fa-android" aria-hidden="true"></i>Descargar APK</a>
+        <a class="btn btn-ghost" href="#contacto"><i class="fa-solid fa-envelope" aria-hidden="true"></i>Escríbenos</a>
+      </div>
+      <small>Disponible para Android. Al instalarla, tu teléfono puede pedirte permiso para instalar apps desde este sitio.</small>
+    </div>
+  </section>
+
+  <section class="section" id="contacto">
+    <div class="contact">
+      <div class="section-head">
+        <h2>¿Tienes dudas? Escríbenos</h2>
+        <p>Cuéntanos sobre tu negocio y te respondemos por correo.</p>
+        <ul class="contact-list">
+          <li><a href="mailto:datyapps@gmail.com"><span class="ico"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span>datyapps@gmail.com</a></li>
+          <li><a href="https://instagram.com/datyapps.sv" target="_blank" rel="noopener"><span class="ico"><i class="fa-brands fa-instagram" aria-hidden="true"></i></span>@datyapps.sv</a></li>
+        </ul>
+      </div>
+      <form class="contact-form" id="contact-form" data-endpoint="https://formsubmit.co/ajax/datyapps@gmail.com" novalidate>
+        <input type="hidden" name="_subject" value="Nuevo mensaje desde el sitio de DatyLook">
+        <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="field">
+          <label for="nombre">Nombre</label>
+          <div class="input-wrap">
+            <i class="fa-solid fa-user" aria-hidden="true"></i>
+            <input id="nombre" name="nombre" type="text" autocomplete="name" required>
+          </div>
+        </div>
+        <div class="field">
+          <label for="correo">Correo electrónico</label>
+          <div class="input-wrap">
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            <input id="correo" name="email" type="email" autocomplete="email" required>
+          </div>
+        </div>
+        <div class="field">
+          <label for="mensaje">Mensaje</label>
+          <div class="input-wrap area">
+            <i class="fa-solid fa-message" aria-hidden="true"></i>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+          </div>
+        </div>
+        <button class="btn btn-primary" type="submit"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i>Enviar mensaje</button>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <a class="logo" href="#inicio" aria-label="DatyLook, ir al inicio">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.8l3 6.7 7.3.8-5.4 4.9 1.5 7.2L12 17.7 5.6 21.4l1.5-7.2L1.7 9.3 9 8.5z"/></svg>
+      <span>Daty<span class="look">Look</span></span>
+    </a>
+    <p>Reserva con los mejores barberos y estilistas.</p>
+    <div class="social">
+      <a href="mailto:datyapps@gmail.com" aria-label="Correo"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+      <a href="https://instagram.com/datyapps.sv" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+    </div>
+  </div>
+  <p class="copy">© 2026 DatyLook. Todos los derechos reservados.</p>
+</footer>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
