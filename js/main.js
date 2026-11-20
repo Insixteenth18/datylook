@@ -1,3 +1,5 @@
+console.log('main.js cargado');
+
 (function () {
   var nav = document.getElementById('nav');
   var btn = document.getElementById('menu-btn');

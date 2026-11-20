@@ -421,10 +421,6 @@ a { color: inherit; text-decoration: none; }
 .how > h3 { font-size: clamp(1.4rem, 3vw, 1.9rem); font-weight: 900; letter-spacing: -0.3px; margin: 0 0 10px; }
 .how-sub { color: var(--text-muted); font-size: 1.05rem; margin: 0 0 36px; }
 
-/* Aparición al hacer scroll */
-.will-reveal { opacity: 0; transform: translateY(16px); transition: opacity .5s ease, transform .5s ease; }
-.will-reveal.in { opacity: 1; transform: none; }
-
 /* Preguntas frecuentes */
 .faq summary { transition: color .15s; }
 .faq summary:hover { color: var(--accent); }
@@ -453,4 +449,12 @@ a { color: inherit; text-decoration: none; }
 
 @media (prefers-reduced-motion: reduce) {
   .faq details[open] p, .form-status.ok, .form-status.err, .input-wrap:has(.invalid) { animation: none; }
+}
+
+/* Navbar en pantallas muy angostas */
+@media (max-width: 480px) {
+  .nav-inner { padding: 10px 16px; gap: 12px; }
+  .brand { flex-shrink: 1; min-width: 0; }
+  .tagline { white-space: normal; }
+  .menu-btn { flex-shrink: 0; }
 }
