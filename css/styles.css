@@ -415,3 +415,42 @@ a { color: inherit; text-decoration: none; }
   text-decoration-thickness: 2px;
   text-underline-offset: 8px;
 }
+
+/* Pasos dentro de "¿Qué es DatyLook?" */
+.how { margin-top: 64px; padding-top: 56px; border-top: 1px solid var(--border); }
+.how > h3 { font-size: clamp(1.4rem, 3vw, 1.9rem); font-weight: 900; letter-spacing: -0.3px; margin: 0 0 10px; }
+.how-sub { color: var(--text-muted); font-size: 1.05rem; margin: 0 0 36px; }
+
+/* Aparición al hacer scroll */
+.will-reveal { opacity: 0; transform: translateY(16px); transition: opacity .5s ease, transform .5s ease; }
+.will-reveal.in { opacity: 1; transform: none; }
+
+/* Preguntas frecuentes */
+.faq summary { transition: color .15s; }
+.faq summary:hover { color: var(--accent); }
+.faq details[open] p { animation: faq-in .3s ease both; }
+@keyframes faq-in {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* Formulario */
+.field input, .field textarea { transition: border-color .2s; }
+.field label { transition: color .2s; }
+.field:focus-within label { color: var(--text); }
+.contact-form .btn i { transition: transform .25s ease; }
+.contact-form .btn:hover i { transform: translate(3px, -3px) rotate(-8deg); }
+.form-status.ok, .form-status.err { animation: pop-in .35s ease both; }
+@keyframes pop-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: none; }
+}
+.input-wrap:has(.invalid) { animation: shake .35s; }
+@keyframes shake {
+  20%, 60% { transform: translateX(-5px); }
+  40%, 80% { transform: translateX(5px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .faq details[open] p, .form-status.ok, .form-status.err, .input-wrap:has(.invalid) { animation: none; }
+}
