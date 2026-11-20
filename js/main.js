@@ -1,19 +1,28 @@
-console.log('main.js cargado');
-
 (function () {
   var nav = document.getElementById('nav');
   var btn = document.getElementById('menu-btn');
-  btn.addEventListener('click', function () {
-    var open = nav.classList.toggle('open');
-    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-  });
+
+  if (nav && btn) {
+    btn.addEventListener('click', function () {
+      var open = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    document.querySelectorAll('#nav-links a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        nav.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
   var tabs = document.querySelectorAll('.tab');
   function selectTab(tab) {
     tabs.forEach(function (t) {
       var on = t === tab;
       t.setAttribute('aria-selected', on ? 'true' : 'false');
       t.tabIndex = on ? 0 : -1;
-      document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+      var panel = document.getElementById(t.getAttribute('aria-controls'));
+      if (panel) panel.hidden = !on;
     });
   }
   tabs.forEach(function (t, i) {
@@ -25,12 +34,7 @@ console.log('main.js cargado');
       if (n) { n.focus(); selectTab(n); }
     });
   });
-  document.querySelectorAll('#nav-links a').forEach(function (a) {
-    a.addEventListener('click', function () {
-      nav.classList.remove('open');
-      btn.setAttribute('aria-expanded', 'false');
-    });
-  });
+
   var form = document.getElementById('contact-form');
   if (form) {
     var status = document.getElementById('form-status');
@@ -48,8 +52,8 @@ console.log('main.js cargado');
         status.textContent = 'Revisa los campos marcados en rojo.';
         return;
       }
-      var btn = form.querySelector('button[type="submit"]');
-      btn.disabled = true;
+      var sendBtn = form.querySelector('button[type="submit"]');
+      sendBtn.disabled = true;
       status.className = 'form-status';
       status.textContent = 'Enviando…';
       fetch(form.dataset.endpoint, {
@@ -64,7 +68,7 @@ console.log('main.js cargado');
       }).catch(function () {
         status.className = 'form-status err';
         status.textContent = 'No se pudo enviar. Escríbenos directamente por correo.';
-      }).then(function () { btn.disabled = false; });
+      }).then(function () { sendBtn.disabled = false; });
     });
   }
 })();
