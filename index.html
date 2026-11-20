@@ -225,45 +225,47 @@
     </div>
   </section>
 
-  <section class="section" id="contacto">
-    <div class="contact">
-      <div class="section-head">
-        <h2>¿Tienes dudas? Escríbenos</h2>
-        <p>Cuéntanos sobre tu negocio y te respondemos por correo.</p>
-        <ul class="contact-list">
-          <li><a href="mailto:datyapps@gmail.com"><span class="ico"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span>datyapps@gmail.com</a></li>
-          <li><a href="https://instagram.com/datyapps.sv" target="_blank" rel="noopener"><span class="ico"><i class="fa-brands fa-instagram" aria-hidden="true"></i></span>@datyapps.sv</a></li>
-        </ul>
+  <div class="band">
+    <section class="section" id="contacto">
+      <div class="contact">
+        <div class="section-head">
+          <h2>¿Tienes dudas? Escríbenos</h2>
+          <p>Cuéntanos sobre tu negocio y te respondemos por correo.</p>
+          <ul class="contact-list">
+            <li><a href="mailto:datyapps@gmail.com"><span class="ico"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span>datyapps@gmail.com</a></li>
+            <li><a href="https://instagram.com/datyapps.sv" target="_blank" rel="noopener"><span class="ico"><i class="fa-brands fa-instagram" aria-hidden="true"></i></span>@datyapps.sv</a></li>
+          </ul>
+        </div>
+        <form class="contact-form" id="contact-form" data-endpoint="https://formsubmit.co/ajax/datyapps@gmail.com" novalidate>
+          <input type="hidden" name="_subject" value="Nuevo mensaje desde el sitio de DatyLook">
+          <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="field">
+            <label for="nombre">Nombre</label>
+            <div class="input-wrap">
+              <i class="fa-solid fa-user" aria-hidden="true"></i>
+              <input id="nombre" name="nombre" type="text" autocomplete="name" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="correo">Correo electrónico</label>
+            <div class="input-wrap">
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              <input id="correo" name="email" type="email" autocomplete="email" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="mensaje">Mensaje</label>
+            <div class="input-wrap area">
+              <i class="fa-solid fa-message" aria-hidden="true"></i>
+              <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+            </div>
+          </div>
+          <button class="btn btn-primary" type="submit"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i>Enviar mensaje</button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
       </div>
-      <form class="contact-form" id="contact-form" data-endpoint="https://formsubmit.co/ajax/datyapps@gmail.com" novalidate>
-        <input type="hidden" name="_subject" value="Nuevo mensaje desde el sitio de DatyLook">
-        <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <div class="field">
-          <label for="nombre">Nombre</label>
-          <div class="input-wrap">
-            <i class="fa-solid fa-user" aria-hidden="true"></i>
-            <input id="nombre" name="nombre" type="text" autocomplete="name" required>
-          </div>
-        </div>
-        <div class="field">
-          <label for="correo">Correo electrónico</label>
-          <div class="input-wrap">
-            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-            <input id="correo" name="email" type="email" autocomplete="email" required>
-          </div>
-        </div>
-        <div class="field">
-          <label for="mensaje">Mensaje</label>
-          <div class="input-wrap area">
-            <i class="fa-solid fa-message" aria-hidden="true"></i>
-            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-          </div>
-        </div>
-        <button class="btn btn-primary" type="submit"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i>Enviar mensaje</button>
-        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-      </form>
-    </div>
-  </section>
+    </section>
+  </div>
 </main>
 
 <footer class="footer">
